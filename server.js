@@ -52,7 +52,6 @@ app.delete("/logout", (req, res) => {
     })
 })
 
-//Set up server engine 0dfj     1edj    fjf thwe causse you loved it to usc g 
 
 let port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`ClipperBook is running on port ${port}!`));
