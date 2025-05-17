@@ -51,12 +51,7 @@ app.delete("/logout", (req, res) => {
         res.redirect("/")
     })
 })
-app.delete("/logout", (req, res) => {
-    req.logout(req.user, err => {
-        if (err) return next(err)
-        res.redirect("/")
-    })
-}) 
+
 //Set up server engine 0dfj     1edj    fjf thwe causse you loved it to usc g 
 
 let port = process.env.PORT || 3000;
