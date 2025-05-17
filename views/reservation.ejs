@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
+  <meta name="generator" content="Hugo 0.98.0" />
+  <title>ClipperBook</title>
+  <meta name="theme-color" content="#712cf9" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url(./images/home.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      border-radius: 10px;
+
+    }
+
+    header div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    h3 {
+      margin: 0;
+      /* Başlık margin'larını sıfırla */
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    nav form {
+      margin: 0;
+      /* Form margin'larını sıfırla */
+    }
+
+    button {
+      border: none;
+      padding: 10px;
+      background-color: #742f0d;
+      /* Buton rengi */
+      color: white;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      border-top: 5px solid whitesmoke;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      width: 500px;
+      margin-left: 50px;
+      margin-bottom: 100px;
+    }
+
+    li {
+      background-color: #333;
+      margin-bottom: 20px;
+      border: 5px solid #ccc;
+      /* Çerçeve rengi ve kalınlığı */
+      padding: 10px;
+      border-radius: 5px;
+      /* Çerçeve köşe yuvarlama */
+      color: whitesmoke
+    }
+  </style>
+
+  <!-- Custom styles for this template -->
+  <link href="cover.css" rel="stylesheet" />
+</head>
+
+<body class="">
+  <div class="">
+    <header class="">
+      <div>
+        <h3 class=''>ClipperBook</h3>
+        <nav class="">
+          <form action="/logout?_method=DELETE" method="POST">
+            <button class="" type="submit">
+              Logout
+            </button>
+          </form>
+        </nav>
+      </div>
+    </header>
+
+    <main class="">
+      <h1 class="">Please select a time to reserve</h1>
+
+    </main>
+
+    <ul id="barberList" style="display: flexbox">
+      <li>
+        <h2>Istabul Kuafor</h2>
+        <button id="myButton1">09:00-10:00</button>
+        <button id="myButton2">12:00-13:00</button>
+        <button id="myButton3">19:00-20:00</button>
+      </li>
+      <script>
+        // Get the button element by its ID
+        var button = document.getElementById("myButton1");
+
+        // Add a click event listener to the button
+        button.addEventListener("click", function () {
+          // Get the content (text) of the button
+          var buttonText = button.textContent || button.innerText;
+
+          // Display the content in an alert
+          alert("Time Reserved From : " + buttonText);
+        });
+      </script>
+
+      <script>
+        // Get the button element by its ID
+        var button = document.getElementById("myButton2");
+
+        // Add a click event listener to the button
+        button.addEventListener("click", function () {
+          // Get the content (text) of the button
+          var buttonText = button.textContent || button.innerText;
+
+          // Display the content in an alert
+          alert("Time Reserved From : " + buttonText);
+        });
+      </script>
+
+      <script>
+        // Get the button element by its ID
+        var button = document.getElementById("myButton3");
+
+        // Add a click event listener to the button
+        button.addEventListener("click", function () {
+          // Get the content (text) of the button
+          var buttonText = button.textContent || button.innerText;
+
+          // Display the content in an alert
+          alert("Time Reserved From : " + buttonText);
+        });
+      </script>
+
+      <li>
+        <h2>Siesta Erkek Kuaforu</h2>
+        <button id="myButton4">09:00-10:00</button>
+        <button id="myButton5">12:00-13:00</button>
+        <button id="myButton6">19:00-20:00</button>
+      </li>
+      <script>
+        // Get the button element by its ID
+        var button = document.getElementById("myButton4");
+
+        // Add a click event listener to the button
+        button.addEventListener("click", function () {
+          // Get the content (text) of the button
+          var buttonText = button.textContent || button.innerText;
+
+          // Display the content in an alert
+          alert("Time Reserved From : " + buttonText);
+        });
+      </script>
+
+      <script>
+        // Get the button element by its ID
+        var button = document.getElementById("myButton5");
+
+        // Add a click event listener to the button
+        button.addEventListener("click", function () {
+          // Get the content (text) of the button
+          var buttonText = button.textContent || button.innerText;
+
+          // Display the content in an alert
+          alert("Time Reserved From : " + buttonText);
+        });
+      </script>
+
+      <script>
+        // Get the button element by its ID
+        var button = document.getElementById("myButton6");
+
+        // Add a click event listener to the button
+        button.addEventListener("click", function () {
+          // Get the content (text) of the button
+          var buttonText = button.textContent || button.innerText;
+
+          // Display the content in an alert
+          alert("Time Reserved From : " + buttonText);
+        });
+      </script>
+
+      <li>
+        <h2>Mine Kuafor</h2>
+        <button id="myButton7">09:00-10:00</button>
+        <button id="myButton8">12:00-13:00</button>
+        <button id="myButton9">19:00-20:00</button>
+      </li>
+      <script>
+        // Get the button element by its ID
+        var button = document.getElementById("myButton7");
+
+        // Add a click event listener to the button
+        button.addEventListener("click", function () {
+          // Get the content (text) of the button
+          var buttonText = button.textContent || button.innerText;
+
+          // Display the content in an alert
+          alert("Time Reserved From : " + buttonText);
+        });
+      </script>
+
+      <script>
+        // Get the button element by its ID
+        var button = document.getElementById("myButton8");
+
+        // Add a click event listener to the button
+        button.addEventListener("click", function () {
+          // Get the content (text) of the button
+          var buttonText = button.textContent || button.innerText;
+
+          // Display the content in an alert
+          alert("Time Reserved From : " + buttonText);
+        });
+      </script>
+
+      <script>
+        // Get the button element by its ID
+        var button = document.getElementById("myButton9");
+
+        // Add a click event listener to the button
+        button.addEventListener("click", function () {
+          // Get the content (text) of the button
+          var buttonText = button.textContent || button.innerText;
+
+          // Display the content in an alert
+          alert("Time Reserved From : " + buttonText);
+        });
+      </script>
+
+
+      <li>
+        <h2>Sayer Sac Bakim</h2>
+        <button id="myButton10">09:00-10:00</button>
+        <button id="myButton11">12:00-13:00</button>
+        <button id="myButton12">19:00-20:00</button>
+      </li>
+      <script>
+        // Get the button element by its ID
+        var button = document.getElementById("myButton10");
+
+        // Add a click event listener to the button
+        button.addEventListener("click", function () {
+          // Get the content (text) of the button
+          var buttonText = button.textContent || button.innerText;
+
+          // Display the content in an alert
+          alert("Time Reserved From : " + buttonText);
+        });
+      </script>
+
+      <script>
+        // Get the button element by its ID
+        var button = document.getElementById("myButton11");
+
+        // Add a click event listener to the button
+        button.addEventListener("click", function () {
+          // Get the content (text) of the button
+          var buttonText = button.textContent || button.innerText;
+
+          // Display the content in an alert
+          alert("Time Reserved From : " + buttonText);
+        });
+      </script>
+
+      <script>
+        // Get the button element by its ID
+        var button = document.getElementById("myButton12");
+
+        // Add a click event listener to the button
+        button.addEventListener("click", function () {
+          // Get the content (text) of the button
+          var buttonText = button.textContent || button.innerText;
+
+          // Display the content in an alert
+          alert("Time Reserved From : " + buttonText);
+        });
+      </script>
+    </ul>
+
+    <footer class="">
+      <p class="">
+        ClipperBook 2023 <a href="" class="">Copyright</a>, by
+        <a href="" class="">@Muğla university Students</a>.
+      </p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+
+</html

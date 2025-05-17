@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Location Information After Signing Up</title>
+</head>
+<body>
+
+<button onclick="requestLocationPermission()">Get Location Permission</button>
+
+<script>
+    function requestLocationPermission() {
+        if ('geolocation' in navigator) {
+            navigator.permissions.query({name:'geolocation'}).then(function(permissionStatus) {
+                if (permissionStatus.state === 'granted') {
+                    // Get location information if user has given permission
+                    getCurrentLocation();
+                } else if (permissionStatus.state === 'prompt') {
+                    // Kullanıcıya izin sor
+                    navigator.geolocation.getCurrentPosition(
+                        function(position) {
+                            // Location information received
+                            handleLocation(position);
+                        },
+                        function(error) {
+                            // An error occurred while retrieving location information
+                            console.error('Location could not be obtained. Error code:', error.code, 'Error message:', error.message);
+                        }
+                    );
+                } else if (permissionStatus.state === 'denied') {
+                    // User did not allow
+                    console.warn('Location permission denied.');
+                }
+            });
+        } else {
+            console.error('Your browser does not support location services.');
+        }
+    }
+
+    function getCurrentLocation() {
+        navigator.geolocation.getCurrentPosition(
+            function(position) {
+                // Konum bilgisi alındı
+                handleLocation(position);
+            },
+            function(error) {
+                // An error occurred while retrieving location information
+                console.error('Location could not be obtained. Error code::', error.code, 'Error message:', error.message);
+            }
+        );
+    }
+
+    function handleLocation(position) {
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+
+        alert('Latitude: ' + latitude + '\nlongitude: ' + longitude);
+
+        // Here you can send location information to the server or perform other operations.
+    }
+</script>
+
+</body>
+</html>
